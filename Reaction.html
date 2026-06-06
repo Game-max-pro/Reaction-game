@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- This tag fixes the screen zoom on mobile phones -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>My Free Universal Game</title>
+    <style>
+        body { 
+            margin: 0; 
+            background: #222; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            height: 100vh; 
+            color: white; 
+            font-family: sans-serif;
+            overflow: hidden; /* Prevents accidental page scrolling on mobile */
+            touch-action: none; /* Stops the phone from zooming when double tapped */
+        }
+        canvas { 
+            background: #111; 
+            border: 2px solid #fff;
+            max-width: 90vw; /* Scales down smoothly on narrow screens */
+            max-height: 90vh;
+        }
+    </style>
+</head>
+<body>
+    <div style="text-align: center;">
+        <h1>Tap to Score!</h1>
+        <canvas id="gameCanvas" width="400" height="400"></canvas>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>
